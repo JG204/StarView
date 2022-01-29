@@ -1,6 +1,6 @@
 # StarView
 
-StarView - software that enables you to view mainly stars, but also deep sky objects in a very simplified manner.
+StarView - software that enables You to view mainly stars, but also deep sky objects in a very simplified manner.
 
 ## How to run
 
@@ -10,9 +10,9 @@ Use [Visual Studio](https://visualstudio.microsoft.com/vs/) to run this program 
 
 * Navigation
 
-  * Rotation - press *LMB* and *move your mouse.*
+  * Rotation - press *LMB* and *move Your mouse.*
   * Zoom - use *scroll* to zoom in or out.
-  * Side Movement - hold *Shift* and *move your mouse.*
+  * Side Movement - hold *Shift* and *move Your mouse.*
 
 * Filtering objects
 
