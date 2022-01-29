@@ -2,6 +2,11 @@
 
 StarView - software that enables You to view mainly stars, but also deep sky objects in a very simplified manner.
 
+## Disclaimer
+
+The data used or/and displayed in this software may not be accurate. I am also not the author of majority of this data. See *Credits* below.
+Keep that in mind when using this program.
+
 ## How to run
 
 Use [Visual Studio](https://visualstudio.microsoft.com/vs/) to run this program or simply download the public release.
