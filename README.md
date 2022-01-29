@@ -5,6 +5,7 @@ StarView - software that enables You to view mainly stars, but also deep sky obj
 ## How to run
 
 Use [Visual Studio](https://visualstudio.microsoft.com/vs/) to run this program or simply download the public release.
+Currenty only supports Windows.
 
 ## How to use
 
