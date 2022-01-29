@@ -13,6 +13,7 @@
 	 <Authors>JG204</Authors>
 	 <ApplicationIcon>Graphics\Icons\StarViewIcon.ico</ApplicationIcon>
 	 <PackageReadmeFile>README.md</PackageReadmeFile>
+	 <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
