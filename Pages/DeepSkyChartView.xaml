@@ -1,0 +1,96 @@
+﻿<Page x:Class="StarView.DeepSkyChartView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:uwpui="using:Microsoft.UI.Xaml.Controls"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        KeyDown="OnKeyDown"
+        Focusable="True"
+        MouseDown="OnMouseDown"
+        PreviewMouseWheel="OnScroll"
+        Background="Black"
+        Title="StarView">
+
+    <Grid x:Name="grid" Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="960"/>
+            <ColumnDefinition Width="220"/>
+        </Grid.ColumnDefinitions>
+
+        <!--#region Viewports-->
+
+        <Viewport3D Name="ChartViewOrthographic" Grid.Column="0">
+            <Viewport3D.Camera>
+                <OrthographicCamera Position="0, 0, 3" LookDirection="0,0,-1" UpDirection="0,1,0" FarPlaneDistance="2000" NearPlaneDistance="1"/>
+            </Viewport3D.Camera>
+            <Viewport3D.Children>
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <AmbientLight Color="White"/>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+            </Viewport3D.Children>
+        </Viewport3D>
+
+        <Viewport3D Name="ChartViewPerspective" Grid.Column="0">
+            <Viewport3D.Camera>
+                <PerspectiveCamera Position="0, 0, 3" LookDirection="0,0,-1" FieldOfView="60" UpDirection="0,1,0" FarPlaneDistance="2000" NearPlaneDistance="1"/>
+            </Viewport3D.Camera>
+            <Viewport3D.Children>
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <AmbientLight Color="White"/>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
+            </Viewport3D.Children>
+        </Viewport3D>
+
+
+        <Canvas x:Name="canvasOn3D"
+                Grid.Column="0"
+                Background="Transparent" 
+                MouseUp="OnViewportMouseUp"  
+                MouseDown="OnViewportMouseDown"  
+                MouseMove="OnViewportMouseMove" Height="704" VerticalAlignment="Center" Grid.ColumnSpan="2">
+        </Canvas>
+
+        <!--#endregion-->
+
+
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,5" Width="970" Height="41">
+            <TextBlock x:Name="StarInfo_1" Foreground="White" Text="Specific information about one selected star" Grid.Column="0" TextAlignment="Right" Grid.ColumnSpan="2"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                <TextBlock x:Name="StarInfo_2" Foreground="White" Text="Information about visible stars and selected star " Grid.Column="0" TextAlignment="Right" Grid.ColumnSpan="2" Height="18"/>
+                <Button x:Name="PreviousButton" Content="&lt;" Margin="2 0" Height="25" Width="25" Click="SelectedStarAction" Style="{DynamicResource ButtonStyle}" Grid.Column="1"/>
+                <Button Name="NextButton" Content="&gt;" Margin="2 0" Height="25" Width="25" Click="SelectedStarAction" Style="{DynamicResource ButtonStyle}" Grid.Column="1"/>
+                <Button Name="DetailsButton" Content="?" Margin="2 0" Height="25" Width="25" Click="SelectedStarAction" Style="{DynamicResource ButtonStyle}" Grid.Column="1"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 30 0 0" Height="340" Width="200">
+            <GroupBox Header="Distance (on sphere)" Style="{StaticResource GroupBoxStyle}" Foreground="DimGray" Height="50" Width="200" Grid.Column="1">
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Slider Name="StarDistanceSlider" Height="25" Width="125" Maximum="100" TickPlacement="BottomRight" TickFrequency="10" Value="90" ValueChanged="StarSizeSlider_ValueChanged" Margin="0 0 3 0" Style="{StaticResource SliderStyle}"/>
+                    <TextBox Name="StarDistanceText" Width="60" Height="18" TextAlignment="left" TextChanged="StarDistanceText_TextChanged" Text="{Binding ElementName=StarDistanceSlider, Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBoxStyle}"/>
+                </StackPanel>
+            </GroupBox>
+            <Button Content="Set" Margin="10" Height="25" Width="55" Click="SetButton_Click"  Style="{DynamicResource ButtonStyle}" ToolTip="Sets specified distance, clicking 'Filter' button afterwards is required to see change" ToolTipService.InitialShowDelay="20" Grid.Column="1"/>
+
+            <CheckBox x:Name="Galaxies" Content="Galaxies" Height="18" Style="{DynamicResource CheckBoxStyle}" IsChecked="False" Grid.Column="1" Checked="Type_Checked" Unchecked="Type_Unchecked"/>
+            <CheckBox x:Name="GalaxyClouds" Content="Galaxy Clouds" Height="18" Style="{DynamicResource CheckBoxStyle}" IsChecked="False" Grid.Column="1" Checked="Type_Checked" Unchecked="Type_Unchecked"/>
+            <CheckBox x:Name="Nebulae" Content="Nebulae" Height="18" Style="{DynamicResource CheckBoxStyle}" IsChecked="True" Grid.Column="1" Checked="Type_Checked" Unchecked="Type_Unchecked"/>
+            <CheckBox x:Name="PlanetaryNebulae" Content="Planetary Nebulae" Height="18" Style="{DynamicResource CheckBoxStyle}" IsChecked="True" Grid.Column="1" Checked="Type_Checked" Unchecked="Type_Unchecked"/>
+            <CheckBox x:Name="GlobularClusers" Content="Globular Clusters" Height="18" Style="{DynamicResource CheckBoxStyle}" IsChecked="False" Grid.Column="1" Checked="Type_Checked" Unchecked="Type_Unchecked"/>
+            <CheckBox x:Name="OpenClusters" Content="Open Clusters" Height="18" Style="{DynamicResource CheckBoxStyle}" IsChecked="False" Grid.Column="1" Checked="Type_Checked" Unchecked="Type_Unchecked"/>
+            <CheckBox x:Name="OpenClustersAndNebulae" Content="Open Clusters with Nebulae" Height="18" Style="{DynamicResource CheckBoxStyle}" IsChecked="True" Grid.Column="1" Checked="Type_Checked" Unchecked="Type_Unchecked"/>
+            <CheckBox x:Name="SupernovaRemnants" Content="Supernova Remnants" Height="18" Style="{DynamicResource CheckBoxStyle}" IsChecked="False" Grid.Column="1" Checked="Type_Checked" Unchecked="Type_Unchecked"/>
+            <CheckBox x:Name="DarkNebulae" Content="Dark Nebulae" Height="18" Style="{DynamicResource CheckBoxStyle}" IsChecked="False" Grid.Column="1" Checked="Type_Checked" Unchecked="Type_Unchecked"/>
+
+            <Button Content="Filter" Margin="10" Height="25" Width="95" Click="FilterButton_Click"  Style="{DynamicResource ButtonStyle}" Grid.Column="1"/>
+            <CheckBox x:Name="PerspectiveView" Margin="10" Content="Perspective View" Height="18" Width="109" Style="{DynamicResource CheckBoxStyle}" IsChecked="False" Grid.Column="1" Checked="FilterButton_Click"/>
+        </StackPanel>
+    </Grid>
+
+</Page>

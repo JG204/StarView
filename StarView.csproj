@@ -1,0 +1,102 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x64</PlatformTarget>
+	 <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	 <AssemblyVersion>0.1</AssemblyVersion>
+	 <FileVersion>0.1</FileVersion>
+	 <Authors>JG204</Authors>
+	 <ApplicationIcon>Graphics\Icons\StarViewIcon.ico</ApplicationIcon>
+	 <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="credits.txt" />
+    <None Remove="ExternalFiles\bbr_color.csv" />
+    <None Remove="ExternalFiles\CIE1931_ver3.bmp" />
+    <None Remove="ExternalFiles\CIE1931_ver3.png" />
+    <None Remove="ExternalFiles\CIE1931_ver4.png" />
+    <None Remove="ExternalFiles\CIE1931_ver5.png" />
+    <None Remove="ExternalFiles\CIE1931_ver6.png" />
+    <None Remove="ExternalFiles\CIE1931_ver7.png" />
+    <None Remove="ExternalFiles\ClassA.jpg" />
+    <None Remove="ExternalFiles\ClassB.jpg" />
+    <None Remove="ExternalFiles\ClassF.jpg" />
+    <None Remove="ExternalFiles\ClassG.jpg" />
+    <None Remove="ExternalFiles\ClassK.jpg" />
+    <None Remove="ExternalFiles\ClassM.jpg" />
+    <None Remove="ExternalFiles\ClassNotAvailable.jpg" />
+    <None Remove="ExternalFiles\ClassO.jpg" />
+    <None Remove="ExternalFiles\dso.csv" />
+    <None Remove="ExternalFiles\hygdata_v3.csv" />
+    <None Remove="ExternalFiles\testbitmap.png" />
+    <None Remove="Graphics\Icons\CloseIcon.png" />
+    <None Remove="Graphics\Icons\firstIcon.png" />
+    <None Remove="Graphics\Icons\HelpIcon.png" />
+    <None Remove="Graphics\Icons\StarViewIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ExternalFiles\bbr_color.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Graphics\Icons\StarViewIcon.ico" />
+    <Resource Include="ExternalFiles\CIE1931_ver3.bmp" />
+    <Resource Include="ExternalFiles\CIE1931_ver3.png" />
+    <Resource Include="ExternalFiles\CIE1931_ver4.png" />
+    <Resource Include="ExternalFiles\CIE1931_ver5.png" />
+    <Resource Include="ExternalFiles\CIE1931_ver6.png" />
+    <Resource Include="ExternalFiles\CIE1931_ver7.png" />
+    <Resource Include="ExternalFiles\ClassA.jpg" />
+    <Resource Include="ExternalFiles\ClassB.jpg" />
+    <Resource Include="ExternalFiles\ClassF.jpg" />
+    <Resource Include="ExternalFiles\ClassG.jpg" />
+    <Resource Include="ExternalFiles\ClassK.jpg" />
+    <Resource Include="ExternalFiles\ClassM.jpg" />
+    <Resource Include="ExternalFiles\ClassNotAvailable.jpg" />
+    <Resource Include="ExternalFiles\ClassO.jpg" />
+    <Content Include="ExternalFiles\dso.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="credits.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="ExternalFiles\testbitmap.png" />
+    <Resource Include="Graphics\Icons\CloseIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ExternalFiles\hygdata_v3.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Graphics\Icons\firstIcon.png" />
+    <Resource Include="Graphics\Icons\HelpIcon.png" />
+    <Resource Include="Graphics\Icons\StarViewIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Pages\DeepSkyChartView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\StarChartView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

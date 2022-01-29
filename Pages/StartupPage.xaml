@@ -1,0 +1,39 @@
+﻿<Page x:Class="StarView.StartupPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      Background="#FF0A0A0A"
+      d:DesignHeight="720" d:DesignWidth="1200"
+      Title="StartupPage">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 80">
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="50" TextAlignment="Center" FontSize="30" Foreground="#FF1FB1FD" Text="Attention!"/>
+
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="White" Text="Some parts of this software related to the creation of 3D charts and graphs were written by: Jianzhong Zhang,"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="Gainsboro" Text="His code has been licensed under: The Code Project Open License (CPOL)"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="White" Text="I have made changes to those files" Margin="0 0 0 15"/>
+
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="White" Text="The star and deep sky object databases was taken from a Github account: astronexus,"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="Gainsboro" Text="Those databases have been licensed under: Creative Commons Attribution-ShareAlike 2.5 Generic license"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="White" Text="I haven't done any changes to those files"/>
+
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="White" Text="The CIE1931xy color space diagram used in this project have been shared by a wikipedia user: BenRG," Margin="0 15 0 0"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="Gainsboro" Text="This color space diagram was published to wikipedia under the: Public Domain license"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="White" Text="I have made changes to this file" Margin="0 0 0 15"/>
+
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="White" Text="The blackbody color datafile used in this software has been made by: Mitchell Charity"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="White" Text="This datafile has been posted on his website"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="White" Text="I have made changes to those files" Margin="0 0 0 25"/>
+
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="White" Text="This message is in the credits.txt the project/program directory along with license and website links in this file" Margin="0 0 0 25"/>
+
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="White" Text="If it wasn't for them and their work this project would have looked a lot different or"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="Gainsboro" Text="I wouldn't have started working on it at all"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="top" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="White" Text="Thank you"/>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="1200" Height="25" TextAlignment="Center" FontSize="16" Foreground="#FF616161" Text="This is my first project so please don't be mad at me if something is or goes wrong, take care" Margin="10 10"/>
+    </Grid>
+</Page>
