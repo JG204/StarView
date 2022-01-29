@@ -76,6 +76,3 @@ https://commons.wikimedia.org/wiki/File:The_Sun_by_the_Atmospheric_Imaging_Assem
 The icon of this program has been made by using the chart of Canis Major constellation, made by wikimedia user Roberto Mura.
 https://commons.wikimedia.org/wiki/File:Canis_Major_charta.png
 Public Domain
-
-## License
-Currently under the [No Permission](https://choosealicense.com/no-permission//) license.
