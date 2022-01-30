@@ -25,6 +25,10 @@ Currenty only supports Windows.
 
   * Use the left-hand side control panel to filter objects and switching view options/modes.
 
+* Selection
+
+ * To be able to select objects You have to first filter objects with Perspective Camera setting turned off. Then use *LMB* to select.
+
 * Searching for objects
 
   * Use the upmost field on the left-hand side control panel to search for a specific object within a catalog.
