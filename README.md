@@ -27,7 +27,7 @@ Currenty only supports Windows.
 
 * Selection
 
- * To be able to select objects You have to first filter objects with Perspective Camera setting turned off. Then use *LMB* to select.
+  * To be able to select objects You have to first filter objects with Perspective Camera setting turned off. Then use *LMB* to select.
 
 * Searching for objects
 
