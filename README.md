@@ -21,13 +21,13 @@ Currenty only supports Windows.
   * Zoom - use *scroll* to zoom in or out.
   * Side Movement - hold *Shift* and *move Your mouse.*
 
-* Filtering objects
-
-  * Use the left-hand side control panel to filter objects and switching view options/modes.
-
 * Selection
 
   * To be able to select objects You have to first filter objects with Perspective Camera setting turned off. Then use *LMB* to select.
+
+* Filtering objects
+
+  * Use the left-hand side control panel to filter objects and switching view options/modes.
 
 * Searching for objects
 
