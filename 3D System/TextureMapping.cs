@@ -38,11 +38,10 @@ namespace StarView
 
         public void SetRGBMaping()
         {
-
             //ImageBrush imageBrush = new ImageBrush(writeableBitmap);
             BitmapImage bitmapImage = new BitmapImage();
             bitmapImage.BeginInit();
-            bitmapImage.UriSource = new Uri($"E:/Projects/save_1/StarView/ExternalFiles/CIE1931_ver7.png", UriKind.Absolute);
+            bitmapImage.UriSource = new Uri("pack://application:,,,/ExternalFiles/CIE1931_ver7.png", UriKind.Absolute);
             bitmapImage.EndInit();
 
 
