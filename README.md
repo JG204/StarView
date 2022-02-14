@@ -10,7 +10,7 @@ Keep that in mind when using this program.
 
 ## How to run
 
-Use [Visual Studio](https://visualstudio.microsoft.com/vs/) to run this program or simply download the public release.
+Use [Visual Studio](https://visualstudio.microsoft.com/vs/) to run this program or simply download the public release. Then unpack the .zip file to a folder on your drive.
 Currenty only supports Windows.
 
 ## How to use
